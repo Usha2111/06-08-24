@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .container {
+            width: 400px;
+            border: 2px solid;
+            text-align: center;
+            height: 400px;
+            
+            background-image: url(../06-08-24/cloud.webp);
+            background-size: auto 100%;
+        }
+        button {
+            background-color: crimson;
+            color: white;
+            margin: 10px 10px;
+            box-shadow: 5px  5px 5px 5px green;
+        }
+        .container > .translate:hover ~ img{
+            transform: translate(100px,100px);
+            transition: all 2s;
+            background-color: blueviolet;
+        }
+        .container > .rotate:hover ~ img{
+            transform: rotate(380deg);
+            transition: all 1s ease-in-out;
+            background-color: aqua;
+
+        }
+        .container > .scale:hover ~ img{
+            transform: scale(2);
+            transition: all 1s;
+        background-color: darkmagenta;
+        }
+        .container > .skew:hover ~ img{
+            transform: skew(180deg);
+            transition: all 2s ease-in-out;
+            background-color: brown;
+        }
+        img{
+            border: 2px solid;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="translate">translate</button>
+        <button class="rotate">rotate</button>
+        <button class="scale">scale</button>
+        <button class="skew">skew</button>
+        <img src="../06-08-24/beautiful-star-artistic-design-14071748.jpg"  width="100px">
+    </div>
+</body>
+</html>
